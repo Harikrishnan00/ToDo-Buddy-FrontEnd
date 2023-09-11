@@ -1,0 +1,9 @@
+
+@import url("../../../../../public/style/style.css");
+
+.error-message{
+    color: rgb(207 62 62);
+    font-size: 1rem;
+    font-family: var(--CONTENT-FONT-FAM);
+    margin-top: .5rem;
+}

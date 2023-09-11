@@ -1,0 +1,12 @@
+.button{
+    font-weight: 700;
+    font-family: var(--CONTENT-FONT-FAM);
+    color: var(--BLACK-COLOR);
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-color:var(--PRIMARY-BTN-COLOR);
+    border: none;
+    min-width: 9rem;
+    border-radius: 0.5rem;
+    min-height: 3rem;
+}

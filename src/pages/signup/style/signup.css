@@ -1,0 +1,43 @@
+.signup-page-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    117deg,
+    #9f88cf 0%,
+    rgba(104, 96, 158, 0.43) 100.82%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--CONTENT-FONT-FAM);
+}
+
+.signup-inner-box {
+  width: 85%;
+  height: 85vh;
+  background: linear-gradient(
+    117deg,
+    #f9f9f9 0.66%,
+    rgba(249, 249, 249, 0) 100%
+  );
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.signup-inner-bg {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+.signup-content-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}

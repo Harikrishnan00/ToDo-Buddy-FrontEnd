@@ -1,0 +1,87 @@
+@import url("../../../../public/style/style.css");
+
+.header-container{
+    height: 7%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 5rem 0 5rem;
+    font-family: var(--CONTENT-FONT-FAM);
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-container img{
+    height: 100%;
+    cursor: pointer;
+}
+
+.logo-container h2{
+    color: var(--PURPLE-COLOR);
+    font-weight: 900;
+    font-size: clamp(2rem,2vw,2.5rem);
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.navigation-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn{
+    font-weight: 700;
+    font-family: var(--CONTENT-FONT-FAM);
+    color: var(--BLACK-COLOR);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.login-btn{
+    background: none;
+    border: none;
+    margin-right: 3.5rem;
+}
+
+.signup-btn{
+    background-color:var(--PRIMARY-BTN-COLOR);
+    border: none;
+    min-width: 9rem;
+    border-radius: 0.5rem;
+    min-height: 3rem;
+}
+
+
+@media (max-width: 850px) {
+    .header-container{
+        flex-direction: column;
+        padding: 0.3rem 2rem 0 2rem;
+        height: 16%;
+    }
+    .header-container img{
+        height: 40%;
+    }
+    .logo-container{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .logo-container h2{
+        justify-self:  flex-end;
+        margin-left: 0;
+    }
+    .navigation-container{
+        justify-content: space-around;
+    }
+    .login-btn{
+        margin-right: 0;
+    }
+  }
