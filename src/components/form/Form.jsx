@@ -2,6 +2,7 @@ import "./style/form.css";
 import { GoogleIcon } from "../../assets/icons/icons";
 import { useForm } from "react-hook-form";
 import { Error } from "../components";
+import {handleSignup} from "../../handle-api/handelSignupApi"
 
 function Form({ title }) {
   const {
@@ -11,8 +12,9 @@ function Form({ title }) {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = () => {
-    console.log(watch("exampleRequired"));
+  const onSubmit = (e) => {
+    const {email,password} = e
+    handleSignup(email,password)
   };
 
   const errorHandle = (value) => {
