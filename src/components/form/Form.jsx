@@ -2,19 +2,21 @@ import "./style/form.css";
 import { GoogleIcon } from "../../assets/icons/icons";
 import { useForm } from "react-hook-form";
 import { Error } from "../components";
-import {handleSignup} from "../../handle-api/handelSignupApi"
+import { handleSignup } from "../../handle-api/handelSignupApi";
+import { handleGoogleAuth } from "../../handle-api/handleGoogleSignUp";
+
 
 function Form({ title }) {
+
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (e) => {
-    const {email,password} = e
-    handleSignup(email,password)
+    const { email, password } = e;
+    handleSignup(email, password);
   };
 
   const errorHandle = (value) => {
@@ -69,7 +71,7 @@ function Form({ title }) {
       </button>
       <p>OR</p>
       <h4>WITH GOOGLE</h4>
-      <div className="google-auth-button input">
+      <div className="google-auth-button input" onClick={handleGoogleAuth}>
         <img src={GoogleIcon} alt="" />
         <p>Google</p>
       </div>
