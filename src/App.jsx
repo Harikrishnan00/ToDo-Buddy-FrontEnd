@@ -1,25 +1,23 @@
-import RouteHandler from "./routes/RouteHandler"
-import {useEffect} from 'react'
-import axios from "axios";
+import RouteHandler from "./routes/RouteHandler";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchUser } from "./handle-api/handleUserFetch";
 
 function App() {
+  
+  const dispatch = useDispatch();
 
-   const checkUser = async () =>{
-    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}api/auth/callback/success`,{
-      withCredentials:true
-    });
-    console.log(data)
-  }
+  const { isUserLogged } = useSelector((state) => state.userStateChanger);
 
   useEffect(() => {
-    checkUser()
+    if (isUserLogged === null) dispatch(fetchUser());
   }, []);
 
   return (
     <>
-     <RouteHandler/>
+      <RouteHandler />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
