@@ -2,13 +2,14 @@ import { Header } from "../../components/components";
 import { HomeBgEffect } from "../../components/ui-componnets/svg-components/Svg";
 import "./style/home.css";
 import { HomeIllustraion } from "../../assets/images/images";
-
-
+import { useSelector } from 'react-redux'
 
 function Home() {
-  
+  const user = useSelector((state)=>state.userStateChanger.value)
   return (
+    
     <div className="home-page-container">
+      <h1>{JSON.stringify(user)}</h1>
       <div className="home-inner-container">
         <div className="home-inner-bg">
           <HomeBgEffect />
