@@ -6,6 +6,7 @@ import { signUp } from "../../handle-api/handelSignupApi";
 import { handleGoogleAuth } from "../../handle-api/handleGoogleSignUp";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { login } from "../../handle-api/handleLogin";
 
 function Form({ title }) {
   useEffect(() => {});
@@ -20,7 +21,14 @@ function Form({ title }) {
 
   const onSubmit = async (e) => {
     const { email, password } = e;
-    dispatch(signUp({ email, password }))
+    console.log(title)
+    if(title==="SIGNUP"){
+      console.log("signup")
+      dispatch(signUp({ email, password }))
+    }else{
+      console.log("login")
+      dispatch(login({ email, password}))
+    }
   };
 
   const error = useSelector((state) =>state.userStateChanger.error)
