@@ -16,11 +16,15 @@ export const userSlice = createSlice({
       state.isLoading = false;
       state.isUserLogged = true;
       state.profile = action.payload;
+    },
+    userErrorHandle:(state,action) =>{
+      state.error = action
+      console.log(state.error)
     }
   },
   extraReducers:fetchUserAction
 });
 
-export const { changeUserState } = userSlice.actions;
+export const { changeUserState, userErrorHandle } = userSlice.actions;
 
 export default userSlice.reducer;

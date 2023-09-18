@@ -8,10 +8,6 @@ function App() {
 
   const { isUserLogged } = useSelector((state) => state.userStateChanger);
 
-  // function test() {
-  //   dispatch(fetchEmailAndPassUser());
-  // }
-
   useEffect(() => {
     if (isUserLogged === null) {
       dispatch(fetchUser());
