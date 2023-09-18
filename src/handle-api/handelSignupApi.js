@@ -5,11 +5,12 @@ async function handleSignup(email,password){
         email,
         password
     }, {
+        withCredentials:true,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
     })
-    console.log(data)
+    return data
 }
 
 export {handleSignup}

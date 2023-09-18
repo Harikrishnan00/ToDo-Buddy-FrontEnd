@@ -5,7 +5,6 @@ import { Header,Form } from "../../components/components";
 
 
 function signup() {
-  console.log(import.meta.env.VITE_API_URL)
   return (
     <div className="signup-page-container">
       <div className="signup-inner-box">

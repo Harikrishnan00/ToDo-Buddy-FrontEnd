@@ -4,14 +4,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "./handle-api/handleUserFetch";
 
 function App() {
-  
   const dispatch = useDispatch();
 
   const { isUserLogged } = useSelector((state) => state.userStateChanger);
 
+  // function test() {
+  //   dispatch(fetchEmailAndPassUser());
+  // }
+
   useEffect(() => {
-    if (isUserLogged === null) dispatch(fetchUser());
-  }, []);
+    if (isUserLogged === null) {
+      dispatch(fetchUser());
+    }
+  }, [isUserLogged]);
 
   return (
     <>
