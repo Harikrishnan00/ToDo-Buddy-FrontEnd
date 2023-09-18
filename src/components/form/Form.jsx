@@ -4,19 +4,29 @@ import { useForm } from "react-hook-form";
 import { Error } from "../components";
 import { handleSignup } from "../../handle-api/handelSignupApi";
 import { handleGoogleAuth } from "../../handle-api/handleGoogleSignUp";
-
+import {useDispatch} from "react-redux"
+import {changeUserState} from "../../redux/slices/slice"
+import { useEffect } from "react";
 
 function Form({ title }) {
 
+  useEffect(()=>{
+   
+  })
+
+  const dispatch = useDispatch()
+  
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (e) => {
+  const onSubmit =async (e) => {
     const { email, password } = e;
-    handleSignup(email, password);
+    const data =await handleSignup(email, password)
+    dispatch(changeUserState(data))
+    window.location.href = 'http://localhost:5173/todo'
   };
 
   const errorHandle = (value) => {
