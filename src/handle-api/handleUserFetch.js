@@ -1,19 +1,25 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import {signUPActions} from "./handelSignupApi"
 import axios from "axios";
 
-export const fetchUser = createAsyncThunk("userState/fetchUser", async () => {
-  const { data } = await axios.get(
+export const fetchUser = createAsyncThunk("userState/fetchUser", async (initialPost, thunkAPI) => {
+  try {
+     const { data } = await axios.get(
     `${import.meta.env.VITE_API_URL}api/auth/authentication/success`,
     {
       withCredentials: true,
     }
   );
   return data;
-  
+
+  } catch (err) {
+   return thunkAPI.rejectWithValue(err.response.data)
+  }
 });
 
 export const fetchUserAction = (builder) => {
   fetchUserActions(builder)
+  signUPActions(builder)
 };
 
 function fetchUserActions(builder){
@@ -26,12 +32,13 @@ function fetchUserActions(builder){
       state.isLoading = false;
       state.isUserLogged = true;
       state.profile = action.payload;
+      console.log(state.profile)
   });
   builder.addCase(fetchUser.rejected, (state, action) => {
     state.isLoading = false;
     state.isUserLogged = false;
-    state.error = action.error.message;
-    console.log(state.error);
+    state.error = action.payload
+    console.log(state.error)
   });
 }
 

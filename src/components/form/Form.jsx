@@ -2,33 +2,28 @@ import "./style/form.css";
 import { GoogleIcon } from "../../assets/icons/icons";
 import { useForm } from "react-hook-form";
 import { Error } from "../components";
-import { handleSignup } from "../../handle-api/handelSignupApi";
+import { signUp } from "../../handle-api/handelSignupApi";
 import { handleGoogleAuth } from "../../handle-api/handleGoogleSignUp";
-import {useDispatch} from "react-redux"
-import {changeUserState} from "../../redux/slices/slice"
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 function Form({ title }) {
+  useEffect(() => {});
 
-  useEffect(()=>{
-   
-  })
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
-  
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit =async (e) => {
+  const onSubmit = async (e) => {
     const { email, password } = e;
-    const data =await handleSignup(email, password)
-    dispatch(changeUserState(data))
-    window.location.href = 'http://localhost:5173/todo'
+    dispatch(signUp({ email, password }))
   };
 
+  const error = useSelector((state) =>state.userStateChanger.error)
   const errorHandle = (value) => {
     if (errors[value].type === "required") {
       return handleErrorCompo(`please enter ${value}`);
@@ -47,6 +42,7 @@ function Form({ title }) {
     <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
       <h3>{title}</h3>
       <h4>WITH EMAIL</h4>
+      {error?.message &&  <Error message={error?.message}/>}
       <div className="input-field-container">
         <div className="email input-field">
           <label htmlFor="email ">EMAIL</label>
@@ -58,7 +54,7 @@ function Form({ title }) {
               required: true,
             })}
           />
-          {errors.email ? errorHandle("email") : <></>}
+          {errors.email && errorHandle("email") }
         </div>
         <div className="password input-field">
           <label htmlFor="password">PASSWORD</label>
@@ -73,11 +69,11 @@ function Form({ title }) {
                 /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
             })}
           />
-          {errors.password ? errorHandle("password") : <></>}
+          {errors.password && errorHandle("password")}
         </div>
       </div>
       <button type="submit" className="input">
-        Login
+        {title}
       </button>
       <p>OR</p>
       <h4>WITH GOOGLE</h4>
