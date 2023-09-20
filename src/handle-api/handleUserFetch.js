@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import {signUPActions} from "./handelSignupApi"
 import axios from "axios";
-import { loginActions } from "./handleLogin";
+
 
 export const fetchUser = createAsyncThunk("userState/fetchUser", async (initialPost, thunkAPI) => {
   try {
@@ -18,13 +17,7 @@ export const fetchUser = createAsyncThunk("userState/fetchUser", async (initialP
   }
 });
 
-export const fetchUserAction = (builder) => {
-  fetchUserActions(builder)
-  signUPActions(builder)
-  loginActions(builder)
-};
-
-function fetchUserActions(builder){
+export function fetchUserActions(builder){
   builder.addCase(fetchUser.pending, (state) => {
     state.isLoading = true;
     state.isUserLogged = false;

@@ -1,5 +1,6 @@
 import { createSlice} from "@reduxjs/toolkit";
-import { fetchUserAction} from "../../handle-api/handleUserFetch";
+import { builderActions } from "../builder";
+
 
 // state initialization
 const initialState = {
@@ -22,7 +23,7 @@ export const userSlice = createSlice({
       console.log(state.error)
     }
   },
-  extraReducers:fetchUserAction
+  extraReducers:builderActions
 });
 
 export const { changeUserState, userErrorHandle } = userSlice.actions;
