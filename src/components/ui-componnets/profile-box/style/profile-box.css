@@ -1,0 +1,25 @@
+.profile-box {
+  width: calc(16rem + 4vw);
+  height: calc(2.5rem + 2vw);
+  border-radius: 0.8rem;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profile-box .profile-img {
+  width: calc(1.8rem + 1vw);
+  height: calc(1.8rem + 1vw);
+  border-radius: 50%;
+}
+
+.profile-box > p {
+  font-size: clamp(1.35rem, 1.75vw, 4rem);
+  font-weight: 500;
+}
+
+.profile-box .logout-icon {
+  height: 50%;
+}

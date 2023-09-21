@@ -1,1 +1,8 @@
 export {default as GoogleIcon} from "./google icon.png"
+export {default as DeleteIconWhite} from "./trash-icon-white.png"
+export {default as DeleteIconBlack} from "./trash-icon-black.png"
+export {default as EditIcon} from "./edit-icon.png"
+export {default as FilterIcon} from "./filter-icon.png"
+export {default as CalenderIcon} from "./calender-icon.png"
+export {default as AddButtonIcon} from "./add-button-icon.png"
+export {default as LogOutIcon} from "./logout-icon.png"

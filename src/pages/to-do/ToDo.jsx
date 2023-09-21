@@ -1,13 +1,24 @@
-import {useSelector} from "react-redux"
-import { googleLogout } from "../../handle-api/handleLogoutApi"
-
+import { useSelector } from "react-redux";
+import { ToDoBgEffect } from "../../components/ui-componnets/svg-components/Svg";
+import "./style/todo.css";
+import { LogoBox, ProfileBox } from "../../components/components";
 
 function ToDo() {
-  const state = useSelector((state)=>state.userStateChanger.value)
-  console.log(state)
+  const state = useSelector((state) => state.userStateChanger.value);
+  console.log(state);
   return (
-    <div onClick={googleLogout}>logout</div>
-  )
+    <div className="todo-page-container">
+      <div className="todo-page-content-wrapper">
+        <div className="todo-page-head-container">
+          <LogoBox />
+          <ProfileBox/>
+        </div>
+      </div>
+      <div className="bg-effect-container">
+        <ToDoBgEffect />
+      </div>
+    </div>
+  );
 }
 
-export default ToDo
+export default ToDo;
