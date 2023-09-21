@@ -1,0 +1,37 @@
+/* .calender{
+    width: 14rem;
+} */
+
+/* .react-calendar{
+    width: 50% !important; 
+} */
+
+.add-box {
+  width: 30%;
+  height: 10rem;
+  border-radius: 0.75rem;
+  border: 2px solid #68609e;
+  background: linear-gradient(
+    92deg,
+    rgba(217, 217, 217, 0.7) 2.3%,
+    rgba(217, 217, 217, 0.4) 100%
+  );
+  margin-top: 1rem;
+}
+
+.label-and-date-picker-container {
+    
+}
+
+.label-picker {
+
+}
+
+.label-picker > input{
+    width: 3.5rem;
+    height: 1.5rem;
+    background-color: #D9D9D9;
+    outline: none;
+    border-radius: .3rem;
+    border: 2px solid #000;
+}

@@ -1,47 +1,62 @@
 @import url("../../../../public/style/style.css");
 
-
-.todo-page-container{
-    width: 100%;
-    height: 100vh;
-    background-color:var(--VIOLET-COLOR) ;
-    overflow: hidden;
+.todo-page-container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--VIOLET-COLOR);
+  overflow: hidden;
 }
 
-.bg-effect-container{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
+.bg-effect-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
 }
 
-.todo-page-content-wrapper{
-    position: relative;
-    z-index: 1;
-    font-family: var(--CONTENT-FONT-FAM);
-    width: 100%;
-    height: 100%;
-    display: flex;
+.todo-page-content-wrapper {
+  position: relative;
+  z-index: 1;
+  font-family: var(--CONTENT-FONT-FAM);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-page-head-container {
+  width: 90%;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0 0 0;
+}
+
+.todo-page-content-wrapper  .content-container {
+  width: 90%;
+  height: 80%;
+  border-radius: 1.75rem;
+  border: 10px solid #9d8dd1;
+  background: linear-gradient(
+    117deg,
+    rgba(249, 249, 249, 0.38) 0.66%,
+    rgba(249, 249, 249, 0) 100%
+  );
+  margin-top: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .todo-page-head-container {
+    height: 15vh;
     flex-direction: column;
     align-items: center;
-}
-
-.todo-page-head-container{
-    width: 90%;
-    height: 8vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 2rem 0 0 0;
-}
-
-@media (max-width: 768px){
-    .todo-page-head-container{
-        height: 15vh;
-        flex-direction: column;
-        align-items: center;
-    }
+  }
 }

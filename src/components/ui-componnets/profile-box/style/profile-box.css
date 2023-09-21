@@ -22,4 +22,5 @@
 
 .profile-box .logout-icon {
   height: 50%;
+  cursor: pointer;
 }
