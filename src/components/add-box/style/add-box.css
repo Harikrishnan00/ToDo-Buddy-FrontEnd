@@ -7,7 +7,7 @@
 } */
 
 .add-box {
-  width: 30%;
+  width: 25%;
   height: 10rem;
   border-radius: 0.75rem;
   border: 2px solid #68609e;
@@ -20,18 +20,113 @@
 }
 
 .label-and-date-picker-container {
-    
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 0 0 0;
 }
 
 .label-picker {
-
+  margin-left: 0.5rem;
 }
 
-.label-picker > input{
-    width: 3.5rem;
-    height: 1.5rem;
-    background-color: #D9D9D9;
-    outline: none;
-    border-radius: .3rem;
-    border: 2px solid #000;
+.label-picker > input {
+  width: 5rem;
+  height: 1.8rem;
+  background-color: #d9d9d9;
+  outline: none;
+  border-radius: 0.3rem;
+  border: 2px solid #000;
+  font-size: 1rem;
+  padding-left: 0.55rem;
+  font-weight: 600;
+}
+
+.calender {
+  width: 6.55rem;
+  height: 1.8rem;
+  background-color: #d9d9d9;
+  border-radius: 0.3rem;
+  border: 2px solid #000;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0.4rem;
+  position: relative;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.calender > img {
+  height: 60%;
+}
+
+.calender > p {
+  margin-left: 0.25rem;
+}
+
+.calender-container {
+  position: absolute;
+  top: 1.9rem;
+  right: 0;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.title-input-container > input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: .5rem;
+}
+
+.todo-checkbox{
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--VIOLET-COLOR);
+  background: transparent;
+  border-radius: .3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #68609e; */
+}
+
+/* .todo-checkbox > img{
+  height: 60%;
+} */
+
+.todo-input-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-input{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-left: 1.5rem;
+}
+
+.todo-content-input{
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.plus-icon{
+  height: 1rem;
+  margin-left: 2rem;
+  cursor: pointer;
 }

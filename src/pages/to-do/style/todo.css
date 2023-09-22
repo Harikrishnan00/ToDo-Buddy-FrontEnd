@@ -39,7 +39,7 @@
 
 .todo-page-content-wrapper  .content-container {
   width: 90%;
-  height: 80%;
+  height: 90%;
   border-radius: 1.75rem;
   border: 10px solid #9d8dd1;
   background: linear-gradient(
@@ -47,7 +47,7 @@
     rgba(249, 249, 249, 0.38) 0.66%,
     rgba(249, 249, 249, 0) 100%
   );
-  margin-top: 1.35rem;
+  margin-top: .3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
