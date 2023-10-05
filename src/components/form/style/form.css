@@ -76,12 +76,26 @@ button + p + h4,
   .google-auth-button,
   .form-container > h3 + h4 {
     margin-top: 0.5rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .form-container button {
     margin-top: 1rem;
+    width: 13.35rem;
+    font-size: .9rem;
+    font-weight: 600;
   }
-  label{
-    font-size: .75rem;
+  label {
+    font-size: 0.75rem;
+  }
+  .input {
+    width: 12.5rem;
+    height: 1.75rem;
+    border-radius: 0.25rem;
+    padding-left: 0.65rem;
+  }
+
+  .google-auth-button {
+    width: 13.15rem;
+    padding-left: 0rem;
   }
 }

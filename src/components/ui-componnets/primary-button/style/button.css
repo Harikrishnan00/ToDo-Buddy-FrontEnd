@@ -1,12 +1,21 @@
-.button{
-    font-weight: 700;
-    font-family: var(--CONTENT-FONT-FAM);
-    color: var(--BLACK-COLOR);
-    font-size: 1.4rem;
-    cursor: pointer;
-    background-color:var(--PRIMARY-BTN-COLOR);
-    border: none;
-    min-width: 9rem;
-    border-radius: 0.5rem;
-    min-height: 3rem;
+.button {
+  font-weight: 700;
+  font-family: var(--CONTENT-FONT-FAM);
+  color: var(--BLACK-COLOR);
+  font-size: 1.4rem;
+  cursor: pointer;
+  background-color: var(--PRIMARY-BTN-COLOR);
+  border: none;
+  min-width: 9rem;
+  border-radius: 0.5rem;
+  min-height: 3rem;
+}
+
+@media (max-width: 476px) {
+  .button {
+    min-width: 7rem;
+    border-radius: 0.35rem;
+    min-height: 2rem;
+    font-size: 1rem;
+  }
 }

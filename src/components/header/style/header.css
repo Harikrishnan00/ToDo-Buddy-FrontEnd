@@ -28,7 +28,7 @@
 .logo-container h2{
     color: var(--PURPLE-COLOR);
     font-weight: 900;
-    font-size: clamp(2rem,2vw,2.5rem);
+    font-size: clamp(1.55rem,2vw,2.5rem);
     margin-left: 1rem;
     cursor: pointer;
 }
@@ -51,15 +51,6 @@
     border: none;
     margin-right: 3.5rem;
 }
-
-.signup-btn{
-    background-color:var(--PRIMARY-BTN-COLOR);
-    border: none;
-    min-width: 9rem;
-    border-radius: 0.5rem;
-    min-height: 3rem;
-}
-
 
 @media (max-width: 850px) {
     .header-container{
@@ -84,4 +75,5 @@
     .login-btn{
         margin-right: 0;
     }
+    
   }
