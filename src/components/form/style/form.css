@@ -78,15 +78,14 @@ button + p + h4,
     margin-top: 0.5rem;
     font-size: 0.8rem;
   }
-  .form-container button {
-    margin-top: 1rem;
-    width: 13.35rem;
-    font-size: .9rem;
-    font-weight: 600;
-  }
+  
   label {
     font-size: 0.75rem;
   }
+  
+}
+
+@media (max-width: 478px) {
   .input {
     width: 12.5rem;
     height: 1.75rem;
@@ -97,5 +96,12 @@ button + p + h4,
   .google-auth-button {
     width: 13.15rem;
     padding-left: 0rem;
+  }
+
+  .form-container button {
+    margin-top: 1rem;
+    width: 13.35rem;
+    font-size: .9rem;
+    font-weight: 600;
   }
 }
